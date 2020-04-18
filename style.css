@@ -1,0 +1,305 @@
+html {
+    background: #171742;
+  }
+  
+  .planet {
+    position: relative;
+      width: 500px;
+      height: 500px;
+      margin: auto;
+      overflow: hidden;
+  }
+  
+  .planet__core {
+      position: absolute;
+      top: 350px;
+      left: 116px;
+      width: 230px;
+      height: 148px;
+      border-radius: 20px 20px 200px 200px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #ebf3fe 25%, #d9e5fe 26%, #d9e5fe 38%, #b1c8fc 39%, #b1c8fc 59%, #2c98f7 60%);
+  }
+  
+  .planet__core:before {
+    content: '';
+      position: absolute;
+      top: 25px;
+      left: 45px;
+      width: 40px;
+      height: 40px;
+      border-radius:100%;
+      background: #d9e5fe;
+  }
+  
+  .planet__core:after {
+      content: '';
+      position: absolute;
+      top: 80px;
+      left: 122px;
+      width: 50px;
+      height: 25px;
+      border-radius: 0 0 80px 80px;
+      background: #b1c8fc;
+  }
+  
+  .planet__hill {
+    position: absolute;
+    top: 290px;
+    left: 240px;
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-bottom: 60px solid #ebf3fe;
+  }
+  
+  .planet__hill:nth-child(2) {
+    position: absolute;
+    top: 270px;
+    left: 200px;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 80px solid #b1c8fc;
+  }
+  .planet__hill:nth-child(3) {
+    position: absolute;
+    top: 310px;
+    left: 190px;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 50px solid #ebf3fe;
+  }
+  
+  .planet__balloon {
+    position: absolute;
+    top: 120px;
+    left: 90px;
+     width: 130px;
+     height: 130px;
+     border-radius: 100%;
+    background: linear-gradient(180deg, #3871e2 25%, #3188e8 26%, #3188e8 77%, #2c98f7 78%);
+    box-shadow: inset -5px 0 0px 0px rgba(0, 0, 0, 0.2);
+    animation: balloon 5s ease infinite;
+  }
+  
+  .planet__balloon--envelope {
+    position: absolute;
+    top: 119px;
+    left: 29px;
+    border-top: 25px solid #2c98f7;
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    height: 0;
+    width: 20px;
+  }
+  
+  .planet__balloon--basket {
+    position: absolute;
+    top: 155px;
+    left: 59px;
+     width: 13px;
+     height: 15px;
+    background: #2c98f7;
+    animation: balloonBasket 5s ease infinite;
+  }
+  .planet__balloon--basket:before {
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: -1px;
+     width: 2px;
+     height: 11px;
+     transform: rotate(-12deg);
+     background: #2c98f7;
+  }
+  .planet__balloon--basket:after {
+    content: '';
+    position: absolute;
+    top: -11px;
+    left: 12px;
+     width: 2px;
+     height: 11px;
+     transform: rotate(8deg);
+     background: #2c98f7;
+  }
+  
+  
+  .planet__cloud {
+    position: absolute;
+      top: 195px;
+      left: 165px;
+         width: 60px;
+      height: 45px;
+      border-radius: 200px 200px 20px 20px;
+      background: #ebf3fe;
+  }
+  
+  .planet__cloud:after {
+     content: '';
+     position: absolute;
+      top: 30px;
+      left: -15px;
+         width: 30px;
+      height: 15px;
+      border-radius: 200px 200px 20px 20px;
+      background: #ebf3fe;
+  }
+  .planet__cloud:before {
+     content: '';
+     position: absolute;
+      top: 13px;
+      left: 34px;
+      width: 50px;
+      height: 32px;
+      border-radius: 300px 300px 30px 30px;
+      background: #ebf3fe;
+  }
+  
+  .planet__cloud:nth-child(2) {
+    position: absolute;
+      top: 195px;
+      left: 165px;
+      width: 60px;
+      height: 45px;
+      border-radius: 200px 200px 20px 20px;
+      background: red;
+  }
+  
+  .planet__satellite {
+          position: absolute;
+          top: 175px;
+          left: 280px;
+          height: 65px;
+          width: 65px;
+          border-radius: 100%;
+          background: rgb(169,25,64);
+      background: linear-gradient(to right, #e4004a 0%, rgba(109, 12, 191, 0) 100%);
+  }
+  
+          .planet__satellite:before {
+              content: '';
+              position: absolute;
+              left: 15px;
+              top: 15px;
+              height: 12px;
+              width: 12px;
+              border-radius: 100%;
+              background: rgba(0, 0, 0, 0.1);
+          }
+          .planet__satellite:after {
+              content: '';
+              position: absolute;
+              left: 29px;
+              top: 35px;
+              height: 20px;
+              width: 20px;
+              border-radius: 100%;
+              background: rgba(0, 0, 0, 0.1);
+      }
+  
+  .planet__stars .planet__star:nth-child(2) {
+      position: absolute;
+          top: 150px;
+          left: 50px;
+          width: 7px;
+          height: 7px;
+      background: #ebf3fe;
+      transform: rotate(deg45);
+        animation: planetStar 6s linear infinite;
+          animation-delay: -1s;
+  }
+  
+  .planet__stars .planet__star:nth-child(3) {
+      position: absolute;
+          top: 210px;
+          left: 40px;
+          width: 5px;
+          height: 5px;
+      background: #2c98f7;
+      transform: rotateY(deg45);
+        animation: planetStar 5s linear infinite;
+          animation-delay: -2s;
+  }
+  
+  .planet__stars .planet__star:nth-child(4) {
+      position: absolute;
+          top: 200px;
+          left: 20px;
+          width: 3px;
+          height: 3px;
+      background: #3871e2;
+      border-radius: 100%;
+      transform: rotateY(deg45);
+        animation: planetStar 5s linear infinite;
+          animation-delay: -2s;
+  }
+  
+  .planet__stars .planet__star:nth-child(5) {
+      position: absolute;
+          top: 185px;
+          left: 260px;
+          width: 3px;
+          height: 3px;
+      border-radius: 100%;
+      background: #ebf3fe;
+      transform: rotateY(deg45);
+        animation: planetStar 5s linear infinite;
+          animation-delay: -1s;
+  }
+  
+  .planet__stars .planet__star:nth-child(6) {
+      position: absolute;
+          top: 125px;
+          left: 230px;
+          width: 7px;
+          height: 7px;
+      background: #3871e2;
+      transform: rotateY(deg45);
+        animation: planetStar 6s linear infinite;
+          animation-delay: -4s;
+  }
+  
+  .planet__stars .planet__star:nth-child(7) {
+      position: absolute;
+          top: 145px;
+          left: 290px;
+          width: 4px;
+          height: 4px;
+      border-radius: 100%;
+      background: #3871e2;
+      transform: rotateY(deg45);
+        animation: planetStar 7s linear infinite;
+          animation-delay: -1s;
+  }
+  
+  
+  
+  
+  /* Animation */
+  
+  @keyframes balloon { 
+      0% { transform: translateY(0); }
+      50% { transform: translateY(14px); }
+      100% { transform: translateY(0); }
+  }
+  
+  @keyframes balloonBasket { 
+      0% { transform: rotateY(0); }
+      50% { transform: rotateY(deg15); }
+      100% { transform: rotateY(0); }
+  }
+  @keyframes planetStar { 
+      0% { transform: scale(1); }
+      50% { transform: scale(2.5); } 
+      100% { transform: scale(1); } 
+  }
+
+
+/* Illustration by MBE
+https://dribbble.com/shots/2875657-Planet
+https://dribbble.com/Madebyelvis /*
