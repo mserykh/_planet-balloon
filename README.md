@@ -4,7 +4,7 @@
 I used only HTML and CSS. Work in progress.
 
 <h1 align="center">
-<img src="https://i.gyazo.com/b889c439ffca5a7707cae155c83450b4.gif">
+<img src="https://i.gyazo.com/3b2c0c8aaa426bac9edee8d67fd1f962.gif">
 </h1>
 
 ## Acknowledgments
